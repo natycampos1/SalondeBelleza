@@ -1,15 +1,13 @@
 <?php
 
-use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\AgendaController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-// ✅ Solo una ruta '/'
-Route::get('/', [UsuarioController::class, 'index']);
+Route::get('/', HomeController::class);
+Route::get('agenda', [AgendaController::class, 'index'])->name('agenda.index');
 
-Route::get('users/{create}', function () {
-    return "Pagina de creación de usuarios";
-});
+Route::get('agenda/create', [AgendaController::class, 'create'])->name('agenda.create');
 
-Route::get('users/{nombre}/{nacionalidad}', function ($nombre, $nacionalidad) {
-    return "Bienvenido usuario: $nombre, De la Nacionalidad: $nacionalidad";
-});
+Route::get('agenda/{agenda}', [AgendaController::class, 'show'])->where(['agenda' => '[A-Za-z]+'])->name('agenda.show');
+Route::post('agenda', [AgendaController::class, 'store'])->name('agenda.store');
