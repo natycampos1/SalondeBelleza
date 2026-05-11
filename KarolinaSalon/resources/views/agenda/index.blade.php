@@ -10,69 +10,76 @@
 
 @section('contenido')
 
-    <div style="text-align: left; font-family: Arial">
+    <div style="text-align: left; font-family: Arial;">
 
-        <strong>
-            <span style="font-family: Arial; font-size: 24pt">
-                Karolina Salón
-            </span>
+        <strong style="font-size: 24pt;">
+            Karolina Salón
         </strong>
 
-        <br />
-        <br />
+        <br><br>
 
-        <span style="font-family: Arial; font-size: 14pt">
+        <span style="font-size: 14pt;">
             Especialistas en tratamientos capilares de alta calidad.
         </span>
 
-        <br />
-        <br />
+        <br><br>
 
         <strong>Nuestros servicios:</strong>
 
-        <br />
-        <br />
+        <br><br>
 
-        &nbsp;&nbsp;- Keratina <br />
-        &nbsp;&nbsp;- Liso Japonés <br />
-        &nbsp;&nbsp;- Nanoplastia <br />
-        &nbsp;&nbsp;- Mechas con Botox <br />
-        &nbsp;&nbsp;- Balayage <br />
-        &nbsp;&nbsp;- Tinte con Velo de Brillo <br />
-        &nbsp;&nbsp;- Células Madre <br />
-        &nbsp;&nbsp;- Repolarización Capilar <br />
-        &nbsp;&nbsp;- Corte <br />
-        &nbsp;&nbsp;- Hidratación <br />
+        <ul>
+            <li>Keratina</li>
+            <li>Liso Japonés</li>
+            <li>Nanoplastia</li>
+            <li>Mechas con Botox</li>
+            <li>Balayage</li>
+            <li>Tinte con Velo de Brillo</li>
+            <li>Células Madre</li>
+            <li>Repolarización Capilar</li>
+            <li>Corte</li>
+            <li>Hidratación</li>
+        </ul>
 
-        <br />
+        <br>
 
         <strong>Horario de atención:</strong>
 
-        <br />
-        <br />
+        <br><br>
 
-        &nbsp;&nbsp;Lunes a Sábado — 8:00 am a 6:00 pm
+        <p>Lunes a Sábado — 8:00 am a 6:00 pm</p>
 
-        <br />
-        <br />
+        <br>
 
         <strong>Promociones de la semana:</strong>
 
-        <br />
-        <br />
+        <br><br>
 
-        &nbsp;&nbsp;<strong>Miércoles:</strong> Liso Japonés + Corte — precio especial <br />
-        &nbsp;&nbsp;<strong>Jueves:</strong> Keratina + Hidratación — precio especial <br />
-        &nbsp;&nbsp;<strong>Viernes:</strong> Balayage + Velo de Brillo — precio especial <br />
+        <ul>
+            <li>
+                <strong>Miércoles:</strong>
+                Liso Japonés + Corte — precio especial
+            </li>
 
-        <br />
+            <li>
+                <strong>Jueves:</strong>
+                Keratina + Hidratación — precio especial
+            </li>
+
+            <li>
+                <strong>Viernes:</strong>
+                Balayage + Velo de Brillo — precio especial
+            </li>
+        </ul>
+
+        <br>
 
         <a href="{{ route('agenda.create') }}">
             <input
                 type="button"
                 value="Reservar cita"
                 style="width:130px;"
-            />
+            >
         </a>
 
     </div>

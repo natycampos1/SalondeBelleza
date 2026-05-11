@@ -17,26 +17,26 @@
     @if ($errors->any())
         <div style="background-color: #c0392b; color: white; padding: 10px; margin-bottom: 16px; border-radius: 4px;">
             <ul style="margin: 0; padding-left: 20px;">
+
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
+
             </ul>
         </div>
     @endif
 
-    <div style="text-align: left; font-family: Arial">
+    <div style="text-align: left; font-family: Arial;">
 
-        <strong>
-            <span id="idFotograma" style="font-family: Arial; font-size: 24pt">
-                CONCERTAR UNA CITA
-            </span>
+        <strong style="font-size: 24pt;">
+            CONCERTAR UNA CITA
         </strong>
 
-        <br />
-        <br />
+        <br><br>
 
         Nombre de la clienta:
-        <br />
+
+        <br>
 
         <input
             name="nombreClienta"
@@ -44,19 +44,21 @@
             id="nombreClienta"
             value="{{ old('nombreClienta') }}"
             style="width:504px;"
-        />
+        >
 
-        <br />
+        <br>
 
         @error('nombreClienta')
-            <small style="color: #c0392b;">{{ $message }}</small>
+            <small style="color: #c0392b;">
+                {{ $message }}
+            </small>
         @enderror
 
-        <br />
-        <br />
+        <br><br>
 
         Servicios (puede seleccionar varios):
-        <br />
+
+        <br>
 
         <select
             name="idServicios[]"
@@ -76,20 +78,25 @@
             <option value="10">Hidratación</option>
         </select>
 
-        <br />
-        <small style="color: gray;">Mantenga presionado Ctrl (o Cmd en Mac) para seleccionar varios servicios.</small>
+        <br>
 
-        <br />
+        <small style="color: gray;">
+            Mantenga presionado Ctrl (o Cmd en Mac) para seleccionar varios servicios.
+        </small>
+
+        <br>
 
         @error('idServicios')
-            <small style="color: #c0392b;">{{ $message }}</small>
+            <small style="color: #c0392b;">
+                {{ $message }}
+            </small>
         @enderror
 
-        <br />
-        <br />
+        <br><br>
 
         Día:
-        <br />
+
+        <br>
 
         <select
             name="idDia"
@@ -104,11 +111,11 @@
             <option value="6">Sábado</option>
         </select>
 
-        <br />
-        <br />
+        <br><br>
 
         Hora:
-        <br />
+
+        <br><br>
 
         <span>
 
@@ -118,56 +125,58 @@
                 name="hora"
                 value="8"
                 checked="checked"
-            />
-            <label for="hora8">8:00 am</label>
-
-            &nbsp;
+            >
+            <label for="hora8" style="margin-right: 15px;">
+                8:00 am
+            </label>
 
             <input
                 id="hora10"
                 type="radio"
                 name="hora"
                 value="10"
-            />
-            <label for="hora10">10:00 am</label>
-
-            &nbsp;
+            >
+            <label for="hora10" style="margin-right: 15px;">
+                10:00 am
+            </label>
 
             <input
                 id="hora12"
                 type="radio"
                 name="hora"
                 value="12"
-            />
-            <label for="hora12">12:00 md</label>
-
-            &nbsp;
+            >
+            <label for="hora12" style="margin-right: 15px;">
+                12:00 md
+            </label>
 
             <input
                 id="hora14"
                 type="radio"
                 name="hora"
                 value="14"
-            />
-            <label for="hora14">2:00 pm</label>
-
-            &nbsp;
+            >
+            <label for="hora14" style="margin-right: 15px;">
+                2:00 pm
+            </label>
 
             <input
                 id="hora16"
                 type="radio"
                 name="hora"
                 value="16"
-            />
-            <label for="hora16">4:00 pm</label>
+            >
+            <label for="hora16">
+                4:00 pm
+            </label>
 
         </span>
 
-        <br />
-        <br />
+        <br><br>
 
         Promoción del día:
-        <br />
+
+        <br>
 
         <select
             name="idPromocion"
@@ -175,37 +184,42 @@
             style="font-size:Medium; width:400px;"
         >
             <option value="0">-- Sin promoción --</option>
-            <option value="1">Miércoles: Liso Japonés + Corte</option>
-            <option value="2">Jueves: Keratina + Hidratación</option>
-            <option value="3">Viernes: Balayage + Velo de Brillo</option>
+            <option value="1">
+                Miércoles: Liso Japonés + Corte
+            </option>
+
+            <option value="2">
+                Jueves: Keratina + Hidratación
+            </option>
+
+            <option value="3">
+                Viernes: Balayage + Velo de Brillo
+            </option>
         </select>
 
-        <br />
-        <br />
+        <br><br>
 
         Observaciones:
-        <br />
+
+        <br>
 
         <textarea
             name="observaciones"
             rows="2"
             cols="20"
             id="observaciones"
-            style="height:64px;width:440px;"
+            style="height:64px; width:440px;"
         >{{ old('observaciones') }}</textarea>
 
-        <br />
-        <br />
+        <br><br>
 
         <input
             type="submit"
             name="btEnviar"
             value="Enviar datos"
             id="btEnviar"
-            style="width:112px;"
-        />
-
-        &nbsp;
+            style="width:112px; margin-right: 10px;"
+        >
 
         <input
             type="reset"
@@ -213,7 +227,7 @@
             value="Restablecer"
             id="btRestablecer"
             style="width:112px;"
-        />
+        >
 
     </div>
 

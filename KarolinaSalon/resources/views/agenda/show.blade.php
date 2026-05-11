@@ -12,82 +12,72 @@
 
     <h1>¡Cita registrada exitosamente en Karolina Salón!</h1>
 
-    <br />
+    <br>
 
-    <div style="text-align: left; font-family: Arial">
+    <div style="text-align: left; font-family: Arial;">
 
-        <strong>
-            <span style="font-family: Arial; font-size: 24pt">
-                DETALLE DE LA CITA
-            </span>
+        <strong style="font-size: 24pt;">
+            DETALLE DE LA CITA
         </strong>
 
-        <br />
-        <br />
+        <br><br>
 
         <strong>Número de cita:</strong>
         {{ $agenda->identificadorCita }}
 
-        <br />
-        <br />
+        <br><br>
 
         <strong>Clienta:</strong>
         {{ $agenda->nombreClienta }}
 
-        <br />
-        <br />
+        <br><br>
 
         <strong>Día:</strong>
         {{ $dias[$agenda->idDia] ?? 'No especificado' }}
 
-        <br />
-        <br />
+        <br><br>
 
         <strong>Hora:</strong>
         {{ $horas[$agenda->hora] ?? 'No especificada' }}
 
-        <br />
-        <br />
+        <br><br>
 
         <strong>Servicios solicitados:</strong>
 
-        <br />
+        <ul>
+            @foreach($agenda->idServicios as $idServicio)
+                <li>
+                    {{ $servicios[$idServicio] ?? 'Servicio desconocido' }}
+                </li>
+            @endforeach
+        </ul>
 
-        @foreach($agenda->idServicios as $idServicio)
-            &nbsp;&nbsp;- {{ $servicios[$idServicio] ?? 'Servicio desconocido' }}
-            <br />
-        @endforeach
-
-        <br />
+        <br>
 
         <strong>Promoción aplicada:</strong>
         {{ $promociones[$agenda->idPromocion] ?? 'Sin promoción' }}
 
-        <br />
-        <br />
+        <br><br>
 
         <strong>Observaciones:</strong>
         {{ $agenda->observaciones ?: 'Ninguna' }}
 
-        <br />
-        <br />
+        <br><br>
 
         <a href="{{ route('agenda.create') }}">
             <input
                 type="button"
                 value="Nueva cita"
                 style="width:112px;"
-            />
+            >
         </a>
-
-        &nbsp;
 
         <a href="{{ route('agenda.index') }}">
             <input
                 type="button"
                 value="Ir al inicio"
                 style="width:112px;"
-            />
+            >
         </a>
 
     </div>
